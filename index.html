@@ -5,16 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Студия</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        <!--<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">-->
+        <link rel="stylesheet" href="./css/main.min.css">
     </head>
     <body>
         <!--Шапка сайта-->
 <header class="page-header">
            <nav class="page-header__nav container">
-            <a href="index.html" class="logo">Web<span class="page-header__logo">Studio</span></a>
+            <a href="index.html" class="logo">Web<span class="logo__page-header">Studio</span></a>
             <ul class="nav-list">
                 <li class="nav-list__item"><a class="nav-list__link nav-list__current" href="index.html">Студия</a></li>
                 <li class="nav-list__item"><a class="nav-list__link" href="portfolio.html">Портфолио</a></li>
@@ -50,7 +50,7 @@
         <!--Секция2 Приемущества-->
         <section class="benefits">
             <div class="container">
-                <h2 class="hidden" >Приемущества</h2>
+                <h2 class="visually-hidden" >Приемущества</h2>
                 <ul class="benefits-list">
                     <li class="benefits-list__item">
                             <div class="benefits-list__phon">
@@ -340,7 +340,7 @@
             <div class="container">
                 <ul class="page-footer__list">
                     <li class="page-footer__item">
-                            <a href="index.html" class="page-footer__link logo">Web<span class="page-footer__logo">Studio</span></a>
+                            <a href="index.html" class="page-footer__link logo">Web<span class="logo__page-footer">Studio</span></a>
                             <address><span class="page-footer__text page-footer__text--white">
                                 г. Киев, пр-т Леси Украинки, 26</span>
                                 <a class="page-footer__contacts page-footer__text" href="mailto:info@devstudio.com">info@devstudio.com</a>
@@ -399,9 +399,9 @@
 
         <!--Модальное окно-->
 
-        <div data-modal class="backdrop is-hidden">
+        <div data-modal class="backdrop backdrop-hidden">
             <div class="modal">
-                <h1 class="hidden">Ввод данных</h1>
+                <h1 class="visually-hidden">Ввод данных</h1>
                 <button data-modal-close class="close">
                     <svg class="close__icon">
                         <use href="./images/symbol-defs.svg#icon-modal-close"></use>
@@ -412,7 +412,7 @@
                     <h2 class="user-contacts__title">Оставьте свои данные, мы вам перезвоним</h2>
 
                     <div class="form-field">
-                        <label  for="name">Имя</label>
+                        <label  class="form-field__label" for="name">Имя</label>
                             <div class="form-field__item">
                                 <input  type="text" name="user-name" id="name" class="form-field__input" />
                                 <div class="modal-icon">
@@ -424,7 +424,7 @@
                             </div>
                     </div>
                     <div class="form-field">
-                        <label  for="phone">Телефон</label>
+                        <label class="form-field__label"  for="phone">Телефон</label>
                             <div class="form-field__item">
                                 <input  type="tel" name="user-phone" id="phone" class="form-field__input" />
                                 <div class="modal-icon">
@@ -435,7 +435,7 @@
                             </div>
                     </div>
                     <div class="form-field">
-                        <label  for="mail">Почта</label>
+                        <label class="form-field__label" for="mail">Почта</label>
                             <div class="form-field__item">
                                 <input  type="email" name="user-mail" id="mail"  class="form-field__input"/>
                                 <div class="modal-icon">
@@ -446,11 +446,11 @@
                             </div>
                     </div>
                     <div class="form-field comment">
-                        <label  for="comment">Комментарий</label>
+                        <label class="form-field__label" for="comment">Комментарий</label>
                         <textarea id="comment" class="comment__input" name="user-comment" rows="5" placeholder="Введите текст"></textarea>
                     </div>
                         <label class="check">
-                            <input type="checkbox" name="policy" value="check" class="check__input hidden" />
+                            <input type="checkbox" name="policy" value="check" class="check__input visually-hidden" />
                             <span class="check__icon"></span>
                             
                             Соглашаюсь с рассылкой и принимаю&nbsp;
@@ -458,7 +458,7 @@
                             <span class="check__contract">Условия договора</span></a>
                         </label>
                  
-                    <button type="submit" class="button">Отправить</button>
+                    <button type="submit" class="button user-contacts__button">Отправить</button>
                 </form>
 
             </div>
